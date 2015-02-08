@@ -13,7 +13,7 @@ clock = pygame.time.Clock()
 pygame.mouse.set_visible(False)
 
 while True:
-    clock.tick(60)
+    clock.tick(10)
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
@@ -22,10 +22,12 @@ while True:
             print('*pew pew!*')
         elif event.type == MOUSEBUTTONDOWN and event.button == 3:
             print('*swoosh!*')
+
     screen.blit(stars, (0, 0))
     pos = pygame.mouse.get_pos()
     screen.blit(cross, (pos))
-    angle = 360-math.atan2(pos[1]-300, pos[0]-400)*180/math.pi
+    angle = 180+math.atan2(pos[0]-400, pos[1]-300)*180/math.pi
+    print(round(angle))
     rotimage = pygame.transform.rotate(ship, angle)
     rect = rotimage.get_rect(center=(400, 300))
     screen.blit(rotimage, rect)
