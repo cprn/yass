@@ -32,7 +32,7 @@ while True:
     screen.blit(stars, (0, 0))
     pos = pygame.mouse.get_pos()
     screen.blit(cross, (pos))
-    angle = math.atan2(pos[0]-W/2, pos[1]-H/2)*180/math.pi
+    angle = -math.atan2(pos[1]-H/2, pos[0]-W/2)*180/math.pi
     player = pygame.transform.rotate(ship, angle)
     rect = player.get_rect(center=(W/2, H/2))
     screen.blit(player, rect)
