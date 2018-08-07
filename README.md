@@ -1,6 +1,6 @@
 # Game description
 
-This project exists purely to make my lazy ass do stuff that starts to look like something.
+This project exists purely to serve a working example of mouse tracking in pygame.
 Based on [Pygame point image towards mouse](http://stackoverflow.com/questions/20162302/pygame-point-image-towards-mouse).
 
 - [Spaceship](http://millionthvector.blogspot.com/2014/06/new-free-starship-sprite.html) Free
